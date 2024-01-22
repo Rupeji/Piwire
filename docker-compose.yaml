@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   wireguard:
-    image: linuxserver/wireguard
+    image: linuxserver/wireguard:latest
     container_name: wireguard
     cap_add:
       - NET_ADMIN
@@ -10,9 +10,9 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Mendoza
+      - TZ=Europe/Madrid
       - SERVERPORT=51820 #optional
-      - PEERS=2 #optional
+      - PEERS=10 #optional
       - PEERDNS=auto #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
     volumes:
@@ -25,28 +25,28 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     dns:
       - 172.20.0.7
-    restart: unless-stopped
+    restart: always
     networks:
       containers:
         ipv4_address: 172.20.0.6
 
   pihole:
     container_name: pihole
-    image: pihole/pihole:v5.7
+    image: pihole/pihole:latest
     expose:
       - "53"
       - "67"
       - "80"
       - "443"
     environment:
-      TZ: 'America/Mendoza'
+      TZ: 'Europe/Madrid'
       WEBPASSWORD: 'peladonerd'
     volumes:
       - './etc-pihole/:/etc/pihole/'
       - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
-    restart: unless-stopped
+    restart: always
     networks:
       containers:
         ipv4_address: 172.20.0.7
