@@ -40,7 +40,7 @@ services:
       - "5080:80/tcp"
     environment:
       TZ: 'Europe/Madrid'
-      WEBPASSWORD: 'peladonerd'
+      WEBPASSWORD: 'pito'
     volumes:
       - './etc-pihole/:/etc/pihole/'
       - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
