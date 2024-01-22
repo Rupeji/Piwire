@@ -9,7 +9,7 @@ services:
         env_file:
                 - $PWD/wireguard.env
         volumes:
-                - /root/wireguard/config:/config
+                - /Home/inhumano/wireguard/config:/config
                 - /lib/modules:/lib/modules
                 - /usr/src:/usr/src
         ports:
@@ -33,8 +33,8 @@ services:
         env_file:
                 - $PWD/pihole.env
         volumes:
-                - $PWD/etc-pihole/:/etc/pihole/
-                - $PWD/etc-dnsmasq.d/:/etc/dnsmasq.d/
+                - /Home/inhumano/etc-pihole/:/etc/pihole/
+                - /Home/inhumano/etc-dnsmasq.d/:/etc/dnsmasq.d/
         cap_add:
                 - NET_ADMIN
         restart: unless-stopped
