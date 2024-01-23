@@ -8,7 +8,7 @@ services:
       - PUID=1000 #optional
       - PGID=1000 #optional
       - TZ=Europe/Madrid #optional
-      - SUBDOMAINS=subdomain1,subdomain2
+      - SUBDOMAINS=inhumano.duckdns.org,rubenperalta.duckdns.org,rupeserver.duckdns.org
       - TOKEN=poneraquímitoken
       #- UPDATE_IP=ipv4 #optional
       - LOG_FILE=false #optional
