@@ -3,9 +3,9 @@ services:
    wireguard:
         image: linuxserver/wireguard
         container_name: wireguard
-        cap_add:
-                - NET_ADMIN
-                - SYS_MODULE
+#        cap_add:
+#                - NET_ADMIN
+#                - SYS_MODULE
    	environment:
       	   TZ: 'Europe/Madrid'
 	   WEBPASSWORD: 'pito'
