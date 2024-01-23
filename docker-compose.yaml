@@ -11,7 +11,7 @@ services:
       - SUBDOMAINS=subdomain1,subdomain2
       - TOKEN=poneraquímitoken
       #- UPDATE_IP=ipv4 #optional
-      #- LOG_FILE=false #optional
+      - LOG_FILE=false #optional
     volumes:
       - /home/inhumano/Duckdns/config:/config #optional
     restart: always
