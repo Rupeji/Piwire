@@ -70,7 +70,7 @@ services:
       - 127.0.0.1
       - 10.2.0.200 # Points to unbound
     environment:
-      TZ: "Asia/Hong_Kong"
+      TZ: "Europe/Madrid"
       WEBPASSWORD: "" # Blank password - Can be whatever you want.
       ServerIP: 10.2.0.100 # Internal IP of pihole
       DNS1: 10.2.0.200 # Unbound IP
